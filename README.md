@@ -1,4 +1,4 @@
-# Build a Student Dropout Prediction Model and Track Pipelines using DVC
+# Build a Student Dropout Prediction Model plus creating and tracking Pipelines using DVC
 
 ## How to run?
 
@@ -18,5 +18,6 @@ dvc init
 dvc repro
 
 dvc dag
+
 
 dvc metrics show
