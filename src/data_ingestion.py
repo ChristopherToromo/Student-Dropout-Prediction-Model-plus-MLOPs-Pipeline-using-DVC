@@ -45,7 +45,6 @@ def load_data(file_path: str) -> pd.DataFrame:
         raise
 
 
-
 # ---------------------------
 # Save data
 # ---------------------------
@@ -88,6 +87,11 @@ def main():
 
         # Load
         df = load_data(csv_path)
+
+        # Drop unnamed index column if present (baked into the Kaggle dataset)
+        if "Unnamed: 0" in df.columns:
+            df = df.drop(columns=["Unnamed: 0"])
+            logger.info("Dropped 'Unnamed: 0' column from dataset.")
 
         # Train-test split
         train_data, test_data = train_test_split(
