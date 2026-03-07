@@ -81,7 +81,6 @@ if model is None:
     st.info("Generate it by running:\n```bash\npython train.py\n```")
     st.stop()
 
-st.success("✅ Model loaded from `model.pkl`")
 
 tab1, tab2, tab3 = st.tabs(["📊 Model Performance", "🔮 Predict a Student", "🗂️ Dataset Explorer"])
 
