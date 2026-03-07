@@ -7,7 +7,7 @@ import json
 
 # Load the XGBoost model
 with open('model.pkl', 'rb') as f:
-    xgb_model = pickle.load(f)
+    model = pickle.load(f)
     
 # Load the test data
 test_data = pd.read_csv("data/features/test_features.csv")
@@ -16,8 +16,8 @@ X_test = test_data.drop(columns=['dropout'])
 y_test = test_data['dropout']    
 
 # Make predictions
-y_pred = xgb_model.predict(X_test)
-y_pred_proba = xgb_model.predict_proba(X_test)
+y_pred = model.predict(X_test)
+y_pred_proba = model.predict_proba(X_test)
 
 # Evaluation Metrics
 accuracy = accuracy_score(y_test, y_pred)
