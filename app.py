@@ -136,7 +136,7 @@ with tab2:
 
     with col1:
         st.markdown("**👤 Personal**")
-        age           = st.slider("Age", 15, 60, 20)
+        age           = st.slider("Age", 15, 30, 7) # Max age 30
         gender        = st.selectbox("Gender", ["Female", "Male"])
         family_income = st.number_input("Family Income", min_value=0.0, value=35000.0, step=1000.0)
         internet      = st.selectbox("Internet Access", ["No", "Yes"])
